@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Hello, Spring Boot!</title>
+</head>
+<body>
+
+	<dl>
+		<th:block th:each="message : ${errorMsg}">
+			<dt>
+				<font size="3" color="red">
+					<span class="name" th:text="${message}"></span><br><br>
+				</font>
+			</dt>
+		</th:block>
+	</dl>
+
+	<form th:action="@{/login}" th:object="${loginForm}" method="post">
+		<!--     <p>User : <input type="text" th:field="*{user}" /> -->
+		<p>
+			User : <input type="text" name="user" value="" />
+			<!--        <em th:if="${#fields.hasErrors('user')}" th:errors="*{user}">Name Error</em></p> -->
+		<p>
+			Pass : <input type="password" name="password" value="" />
+			<!--        <em th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Name Error</em></p> -->
+		<p>
+			<input type="submit" value="Submit" />
+		</p>
+	</form>
+	<br>
+
+</body>
+</html>

@@ -1,0 +1,612 @@
+2019-04-25 10:30:49.877  INFO 12436 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 12436 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 10:30:49.893  INFO 12436 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 10:30:53.352  INFO 12436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 10:30:53.430  INFO 12436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 10:30:53.430  INFO 12436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 10:30:53.445  INFO 12436 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 10:30:53.664  INFO 12436 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 10:30:53.664  INFO 12436 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3631 ms
+2019-04-25 10:30:54.365  INFO 12436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 10:30:54.771  INFO 12436 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 10:30:55.006  INFO 12436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 10:30:55.021  INFO 12436 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 6.487 seconds (JVM running for 8.486)
+2019-04-25 10:31:23.858  INFO 12436 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 10:31:23.858  INFO 12436 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 10:31:23.920  INFO 12436 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 61 ms
+2019-04-25 10:31:55.839 ERROR 12436 --- [http-nio-8080-exec-6] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-6] Exception processing template "view/loginSuccess.html": Error resolving template [view/loginSuccess.html], template might not exist or might not be accessible by any of the configured Template Resolvers
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [view/loginSuccess.html], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+
+2019-04-25 10:31:55.845 ERROR 12436 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/sample_app] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [view/loginSuccess.html], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [view/loginSuccess.html], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+
+2019-04-25 11:13:46.916  INFO 4904 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 4904 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 11:13:46.916  INFO 4904 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 11:13:50.123  INFO 4904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 11:13:50.171  INFO 4904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 11:13:50.171  INFO 4904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 11:13:50.187  INFO 4904 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 11:13:50.453  INFO 4904 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 11:13:50.453  INFO 4904 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3427 ms
+2019-04-25 11:13:51.130  INFO 4904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 11:13:51.267  WARN 4904 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userListController' method 
+public org.springframework.web.servlet.ModelAndView com.example.demo.controller.UserListController.getAllUserApi()
+to {GET /all_user_api}: There is already 'loginController' bean method
+public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, com.example.demo.bean.UserInfo>> com.example.demo.controller.LoginController.getAllUserApi() mapped.
+2019-04-25 11:13:51.269  INFO 4904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-25 11:13:51.275  INFO 4904 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-04-25 11:13:51.348  INFO 4904 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-04-25 11:13:51.361 ERROR 4904 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userListController' method 
+public org.springframework.web.servlet.ModelAndView com.example.demo.controller.UserListController.getAllUserApi()
+to {GET /all_user_api}: There is already 'loginController' bean method
+public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, com.example.demo.bean.UserInfo>> com.example.demo.controller.LoginController.getAllUserApi() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.example.demo.Demo2Application.main(Demo2Application.java:12) [classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userListController' method 
+public org.springframework.web.servlet.ModelAndView com.example.demo.controller.UserListController.getAllUserApi()
+to {GET /all_user_api}: There is already 'loginController' bean method
+public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, com.example.demo.bean.UserInfo>> com.example.demo.controller.LoginController.getAllUserApi() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:618) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:586) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:312) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:282) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.util.LinkedHashMap.forEach(Unknown Source) ~[na:1.8.0_201]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:280) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:252) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:211) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:199) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:164) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1821) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	... 16 common frames omitted
+
+2019-04-25 11:14:45.985  INFO 2256 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 2256 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 11:14:46.001  INFO 2256 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 11:14:49.240  INFO 2256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 11:14:49.319  INFO 2256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 11:14:49.320  INFO 2256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 11:14:49.338  INFO 2256 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 11:14:49.552  INFO 2256 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 11:14:49.553  INFO 2256 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3459 ms
+2019-04-25 11:14:50.272  INFO 2256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 11:14:50.651  INFO 2256 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 11:14:50.882  INFO 2256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 11:14:50.888  INFO 2256 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 5.806 seconds (JVM running for 7.047)
+2019-04-25 11:15:00.432  INFO 2256 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 11:15:00.432  INFO 2256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 11:15:00.456  INFO 2256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2019-04-25 11:15:00.544  INFO 2256 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 11:15:00.546  INFO 2256 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 11:15:00.559  INFO 2256 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 11:15:21.877  INFO 2256 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 11:15:21.878  INFO 2256 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : param : [user : user0001, password : password001]
+2019-04-25 11:15:21.901  INFO 2256 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 11:16:01.378  WARN 2256 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-04-25 11:16:09.301  INFO 2256 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 11:16:26.973  INFO 2256 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 11:16:26.983  INFO 2256 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 11:16:28.057  INFO 2256 --- [http-nio-8080-exec-7] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 11:16:28.060  INFO 2256 --- [http-nio-8080-exec-7] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 11:16:28.063  INFO 2256 --- [http-nio-8080-exec-7] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 11:17:16.221  INFO 11344 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 11344 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 11:17:16.221  INFO 11344 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 11:17:19.616  INFO 11344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 11:17:19.655  INFO 11344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 11:17:19.655  INFO 11344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 11:17:19.686  INFO 11344 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 11:17:19.889  INFO 11344 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 11:17:19.889  INFO 11344 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3558 ms
+2019-04-25 11:17:20.561  INFO 11344 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 11:17:20.919  INFO 11344 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 11:17:21.141  INFO 11344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 11:17:21.147  INFO 11344 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 6.06 seconds (JVM running for 7.02)
+2019-04-25 11:17:30.289  INFO 11344 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 11:17:30.290  INFO 11344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 11:17:30.314  INFO 11344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2019-04-25 11:17:33.903  INFO 11344 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 11:17:35.263  INFO 11344 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 11:17:35.323  INFO 11344 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 11:54:22.204  INFO 6200 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 6200 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 11:54:22.212  INFO 6200 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 11:54:26.009  INFO 6200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 11:54:26.050  INFO 6200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 11:54:26.050  INFO 6200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 11:54:26.081  INFO 6200 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 11:54:26.278  INFO 6200 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 11:54:26.278  INFO 6200 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3949 ms
+2019-04-25 11:54:26.980  INFO 6200 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 11:54:27.351  INFO 6200 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 11:54:27.553  INFO 6200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 11:54:27.559  INFO 6200 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 6.473 seconds (JVM running for 7.572)
+2019-04-25 11:54:36.797  INFO 6200 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 11:54:36.797  INFO 6200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 11:54:36.823  INFO 6200 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2019-04-25 11:54:40.143  INFO 6200 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 11:54:40.150  INFO 6200 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 11:54:40.205  INFO 6200 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 13:18:38.800  INFO 6744 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 6744 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 13:18:38.816  INFO 6744 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 13:18:41.706  INFO 6744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 13:18:41.751  INFO 6744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 13:18:41.752  INFO 6744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 13:18:41.768  INFO 6744 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 13:18:42.024  INFO 6744 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 13:18:42.024  INFO 6744 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3099 ms
+2019-04-25 13:18:42.730  INFO 6744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 13:18:43.144  INFO 6744 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 13:18:43.440  INFO 6744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 13:18:43.445  INFO 6744 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 5.676 seconds (JVM running for 7.045)
+2019-04-25 13:18:53.624  INFO 6744 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 13:18:53.626  INFO 6744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 13:18:53.660  INFO 6744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 33 ms
+2019-04-25 13:19:00.504  INFO 6744 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 13:19:09.148  INFO 6744 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 13:19:09.211  INFO 6744 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 16:30:52.228  INFO 12968 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 12968 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 16:30:52.290  INFO 12968 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 16:30:55.359  INFO 12968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 16:30:55.405  INFO 12968 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 16:30:55.405  INFO 12968 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 16:30:55.436  INFO 12968 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 16:30:55.689  INFO 12968 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 16:30:55.691  INFO 12968 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3247 ms
+2019-04-25 16:30:56.934  INFO 12968 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 16:30:57.506  INFO 12968 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 16:30:58.055  INFO 12968 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 16:30:58.066  INFO 12968 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 6.885 seconds (JVM running for 8.168)
+2019-04-25 16:31:03.882  INFO 12968 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 16:31:03.883  INFO 12968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 16:31:03.928  INFO 12968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 45 ms
+2019-04-25 16:31:09.528  INFO 12968 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 16:31:09.534  INFO 12968 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 16:31:09.581  INFO 12968 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 16:32:57.511  INFO 5348 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 5348 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 16:32:58.209  INFO 5348 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 16:33:01.187  INFO 5348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 16:33:01.268  INFO 5348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 16:33:01.273  INFO 5348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 16:33:01.303  INFO 5348 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 16:33:01.577  INFO 5348 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 16:33:01.577  INFO 5348 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3206 ms
+2019-04-25 16:33:02.473  INFO 5348 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 16:33:02.908  INFO 5348 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 16:33:03.239  INFO 5348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 16:33:03.253  INFO 5348 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 6.934 seconds (JVM running for 7.943)
+2019-04-25 16:44:12.295  INFO 6252 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 6252 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 16:44:12.326  INFO 6252 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 16:44:15.505  INFO 6252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 16:44:15.546  INFO 6252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 16:44:15.546  INFO 6252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 16:44:15.561  INFO 6252 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 16:44:15.800  INFO 6252 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 16:44:15.801  INFO 6252 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3381 ms
+2019-04-25 16:44:16.515  INFO 6252 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 16:44:16.878  INFO 6252 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 16:44:17.144  INFO 6252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 16:44:17.144  INFO 6252 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 5.896 seconds (JVM running for 6.972)
+2019-04-25 16:44:37.381  INFO 6252 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 16:44:37.383  INFO 6252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 16:44:37.406  INFO 6252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2019-04-25 16:44:41.358  INFO 6252 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 16:44:41.363  INFO 6252 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [user : master0001, password : pass9999]
+2019-04-25 16:44:41.415  INFO 6252 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 16:51:16.159  INFO 13100 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 13100 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 16:51:16.169  INFO 13100 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 16:51:19.566  INFO 13100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 16:51:19.667  INFO 13100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 16:51:19.667  INFO 13100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 16:51:19.706  INFO 13100 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 16:51:19.990  INFO 13100 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 16:51:19.991  INFO 13100 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3705 ms
+2019-04-25 16:51:21.109  INFO 13100 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 16:51:21.592  INFO 13100 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 16:51:21.840  INFO 13100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 16:51:21.847  INFO 13100 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 6.72 seconds (JVM running for 7.718)
+2019-04-25 16:51:26.652  INFO 13100 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 16:51:26.652  INFO 13100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 16:51:26.681  INFO 13100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2019-04-25 16:51:37.363  INFO 13100 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 16:51:37.369  INFO 13100 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 16:51:37.437  INFO 13100 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 16:51:49.564  INFO 13100 --- [http-nio-8080-exec-4] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 16:51:49.565  INFO 13100 --- [http-nio-8080-exec-4] com.example.demo.BaseAdvice              : param : [user : master0001, password : pass9999]
+2019-04-25 16:51:49.590  INFO 13100 --- [http-nio-8080-exec-4] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 16:54:16.724  INFO 9712 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 9712 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 16:54:16.736  INFO 9712 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 16:54:20.964  INFO 9712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 16:54:21.021  INFO 9712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 16:54:21.022  INFO 9712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 16:54:21.052  INFO 9712 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 16:54:21.301  INFO 9712 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 16:54:21.301  INFO 9712 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4412 ms
+2019-04-25 16:54:22.042  INFO 9712 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 16:54:22.397  INFO 9712 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 16:54:22.623  INFO 9712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 16:54:22.629  INFO 9712 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 7.107 seconds (JVM running for 8.421)
+2019-04-25 16:55:17.142  INFO 9712 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 16:55:17.142  INFO 9712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 16:55:17.189  INFO 9712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 47 ms
+2019-04-25 16:55:17.304  INFO 9712 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 16:55:17.305  INFO 9712 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 16:55:17.334  INFO 9712 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 16:55:42.068  INFO 9712 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 16:55:42.070  INFO 9712 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : param : [user : user0001, password : pass0001]
+2019-04-25 16:55:42.091  INFO 9712 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 16:55:42.106 ERROR 9712 --- [http-nio-8080-exec-3] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-3] Exception processing template "nomal_menu.html": Could not parse as expression: "${session.getAttribute(" (template: "nomal_menu.html" - line 13, col 4)
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "${session.getAttribute(" (template: "nomal_menu.html" - line 13, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) [spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+
+2019-04-25 16:55:42.109 ERROR 9712 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/sample_app] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "${session.getAttribute(" (template: "nomal_menu.html" - line 13, col 4)] with root cause
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "${session.getAttribute(" (template: "nomal_menu.html" - line 13, col 4)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+
+2019-04-25 16:57:35.029  INFO 1996 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 1996 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 16:57:35.045  INFO 1996 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 16:57:38.653  INFO 1996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 16:57:38.698  INFO 1996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 16:57:38.702  INFO 1996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 16:57:38.726  INFO 1996 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 16:57:38.953  INFO 1996 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 16:57:38.954  INFO 1996 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3816 ms
+2019-04-25 16:57:39.698  INFO 1996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 16:57:40.071  INFO 1996 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 16:57:40.308  INFO 1996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 16:57:40.310  INFO 1996 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 6.223 seconds (JVM running for 7.24)
+2019-04-25 16:57:51.282  INFO 1996 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 16:57:51.285  INFO 1996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 16:57:51.316  INFO 1996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2019-04-25 16:57:51.386  INFO 1996 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 16:57:51.386  INFO 1996 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 16:57:51.401  INFO 1996 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 16:57:55.702  INFO 1996 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 16:57:55.703  INFO 1996 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : param : [user : user0001, password : pass0001]
+2019-04-25 16:57:55.717  INFO 1996 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:03:00.395  INFO 2516 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 2516 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 17:03:00.403  INFO 2516 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 17:03:03.414  INFO 2516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 17:03:03.453  INFO 2516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 17:03:03.468  INFO 2516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 17:03:03.484  INFO 2516 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 17:03:03.703  INFO 2516 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 17:03:03.703  INFO 2516 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3180 ms
+2019-04-25 17:03:04.444  INFO 2516 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 17:03:04.792  INFO 2516 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 17:03:05.001  INFO 2516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 17:03:05.018  INFO 2516 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 5.727 seconds (JVM running for 6.702)
+2019-04-25 17:03:12.026  INFO 2516 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 17:03:12.027  INFO 2516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 17:03:12.050  INFO 2516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2019-04-25 17:03:12.095  WARN 2516 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-04-25 17:03:14.650  INFO 2516 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 17:03:14.651  INFO 2516 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 17:03:14.680  INFO 2516 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 17:03:18.479  INFO 2516 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:03:18.479  INFO 2516 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : param : [user : user0001, password : pass0001]
+2019-04-25 17:03:33.728  INFO 2516 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:03:38.513  INFO 2516 --- [http-nio-8080-exec-5] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:03:38.514  INFO 2516 --- [http-nio-8080-exec-5] com.example.demo.BaseAdvice              : param : [user : user0001, password : pass0001]
+2019-04-25 17:03:42.808  INFO 2516 --- [http-nio-8080-exec-5] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:03:53.419  INFO 2516 --- [http-nio-8080-exec-8] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:03:53.420  INFO 2516 --- [http-nio-8080-exec-8] com.example.demo.BaseAdvice              : param : [user : user0001, password : pass0001]
+2019-04-25 17:03:56.366  INFO 2516 --- [http-nio-8080-exec-8] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:04:27.848  INFO 2516 --- [http-nio-8080-exec-9] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 17:04:27.852  INFO 2516 --- [http-nio-8080-exec-9] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 17:04:27.854  INFO 2516 --- [http-nio-8080-exec-9] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 17:04:33.609  INFO 2516 --- [http-nio-8080-exec-10] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:04:33.610  INFO 2516 --- [http-nio-8080-exec-10] com.example.demo.BaseAdvice              : param : [user : user0001, password : pass0001]
+2019-04-25 17:04:39.432  INFO 2516 --- [http-nio-8080-exec-10] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:15:01.638  INFO 2516 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, getAllUserApi
+2019-04-25 17:15:01.640  INFO 2516 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 17:15:01.645  INFO 2516 --- [http-nio-8080-exec-3] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, getAllUserApi
+2019-04-25 17:28:16.399  INFO 4596 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 4596 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 17:28:16.414  INFO 4596 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 17:28:20.074  INFO 4596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 17:28:20.121  INFO 4596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 17:28:20.122  INFO 4596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 17:28:20.144  INFO 4596 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 17:28:20.345  INFO 4596 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 17:28:20.345  INFO 4596 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3806 ms
+2019-04-25 17:28:21.059  INFO 4596 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 17:28:21.414  INFO 4596 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 17:28:21.631  INFO 4596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 17:28:21.637  INFO 4596 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 6.289 seconds (JVM running for 7.236)
+2019-04-25 17:28:32.386  INFO 4596 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 17:28:32.387  INFO 4596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 17:28:32.412  INFO 4596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2019-04-25 17:28:32.510  INFO 4596 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 17:28:32.513  INFO 4596 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 17:28:32.541  INFO 4596 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 17:28:42.153  INFO 4596 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:28:42.154  INFO 4596 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : param : [user : master0001, password : pass9999]
+2019-04-25 17:28:46.076  INFO 4596 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:28:50.349  INFO 4596 --- [http-nio-8080-exec-4] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 17:28:50.353  INFO 4596 --- [http-nio-8080-exec-4] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 17:28:50.356  INFO 4596 --- [http-nio-8080-exec-4] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 17:29:12.288  INFO 4596 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:29:12.289  INFO 4596 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : param : [user : user0001, password : pass0001]
+2019-04-25 17:29:12.289  INFO 4596 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:41:10.696  INFO 1324 --- [main] com.example.demo.Demo2Application        : Starting Demo2Application on 18R-02-138 with PID 1324 (started by yamashitayb in C:\Users\yamashitayb\Desktop\山フォルダ\98_GitHub\wordspace\demo2)
+2019-04-25 17:41:10.696  INFO 1324 --- [main] com.example.demo.Demo2Application        : No active profile set, falling back to default profiles: default
+2019-04-25 17:41:13.939  INFO 1324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-25 17:41:14.012  INFO 1324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-25 17:41:14.012  INFO 1324 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-25 17:41:14.043  INFO 1324 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_201/bin/server;C:/Program Files/Java/jre1.8.0_201/bin;C:/Program Files/Java/jre1.8.0_201/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;"C:\Users\yamashitayb\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_201\bin";;C:\Users\yamashitayb\Desktop\山フォルダ\99_java\sts-4.1.2.RELEASE;;.]
+2019-04-25 17:41:14.291  INFO 1324 --- [main] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring embedded WebApplicationContext
+2019-04-25 17:41:14.291  INFO 1324 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3472 ms
+2019-04-25 17:41:14.962  INFO 1324 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-25 17:41:15.388  INFO 1324 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-04-25 17:41:15.638  INFO 1324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sample_app'
+2019-04-25 17:41:15.638  INFO 1324 --- [main] com.example.demo.Demo2Application        : Started Demo2Application in 5.961 seconds (JVM running for 7.002)
+2019-04-25 17:41:30.023  INFO 1324 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sample_app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-25 17:41:30.024  INFO 1324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-25 17:41:30.056  INFO 1324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
+2019-04-25 17:41:30.149  INFO 1324 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 17:41:30.150  INFO 1324 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 17:41:30.176  INFO 1324 --- [http-nio-8080-exec-1] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 17:41:34.680  INFO 1324 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:41:34.681  INFO 1324 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : param : [user : master0001, password : pass9999]
+2019-04-25 17:41:34.694  INFO 1324 --- [http-nio-8080-exec-2] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:41:39.822  WARN 1324 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-04-25 17:41:41.910  WARN 1324 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-04-25 17:41:46.225  INFO 1324 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.HomeController, home
+2019-04-25 17:41:46.226  INFO 1324 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : param : [null]
+2019-04-25 17:41:46.227  INFO 1324 --- [http-nio-8080-exec-6] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.HomeController, home
+2019-04-25 17:41:50.820  INFO 1324 --- [http-nio-8080-exec-7] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:41:50.821  INFO 1324 --- [http-nio-8080-exec-7] com.example.demo.BaseAdvice              : param : [user : master0001, password : pass9999]
+2019-04-25 17:41:50.822  INFO 1324 --- [http-nio-8080-exec-7] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:41:52.997  INFO 1324 --- [http-nio-8080-exec-9] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:41:52.997  INFO 1324 --- [http-nio-8080-exec-9] com.example.demo.BaseAdvice              : param : [user : master0001, password : pass9999]
+2019-04-25 17:41:52.997  INFO 1324 --- [http-nio-8080-exec-9] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
+2019-04-25 17:41:54.086  INFO 1324 --- [http-nio-8080-exec-10] com.example.demo.BaseAdvice              : start : class com.example.demo.controller.LoginController, login
+2019-04-25 17:41:54.088  INFO 1324 --- [http-nio-8080-exec-10] com.example.demo.BaseAdvice              : param : [user : master0001, password : pass9999]
+2019-04-25 17:41:54.088  INFO 1324 --- [http-nio-8080-exec-10] com.example.demo.BaseAdvice              : end : class com.example.demo.controller.LoginController, login
