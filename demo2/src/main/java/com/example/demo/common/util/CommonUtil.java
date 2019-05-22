@@ -26,6 +26,15 @@ public class CommonUtil {
 		return value.substring(0, value.length() - 2);
 	}
 	
+	/**
+	 * ファイルフルPATH取得処理.
+	 * <p>
+	 * 上手くファイルの早退パス指定が出来ないので苦肉の策
+	 * </p>
+	 * 
+	 * @param fileName ファイル名
+	 * @return ファイル名込みのフルPATH
+	 */
 	public static String readFilePath(String fileName) {
 		
         Path path = Paths.get(fileName);

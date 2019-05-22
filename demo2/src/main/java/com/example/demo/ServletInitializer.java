@@ -1,7 +1,7 @@
 package com.example.demo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -57,7 +57,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 		FileDataInfo fileDataInfo = dataFileService.getFileData(readFilePath, CommonConstant.FILE_HEADER_NOT_EXIST);
 		
 		// ファイルのユーザ詳細情報の取得
-		List<UserDetailInfo> userDetailInfoList = this.initUserDetailInfo();
+		Map<String, UserDetailInfo> userDetailMap = this.initUserDetailInfo();
 
 		for (String fileValue : fileDataInfo.getFileDataList()) {
 
@@ -69,14 +69,9 @@ public class ServletInitializer extends SpringBootServletInitializer {
 			userInfo.setUserId(userId);
 			userInfo.setPassword(pasword);
 			userInfo.setUserDiv(userDiv);
-
-			for (UserDetailInfo userDetailInfo : userDetailInfoList) {
-				
-				if (userDetailInfo.getUserId().equals(userId)) {
-					userInfo.setUserDetailInfo(userDetailInfo);
-					break;
-				}
-			}
+			
+			UserDetailInfo userDetailInfo = userDetailMap.get(userId);
+			userInfo.setUserDetailInfo(userDetailInfo);
 
 			DemoDataMemory.registUserLoginInfo(userInfo);
 		}
@@ -90,9 +85,9 @@ public class ServletInitializer extends SpringBootServletInitializer {
 	 * 
 	 * @return ユーザ詳細情報
 	 */
-	public List<UserDetailInfo> initUserDetailInfo() {
+	private Map<String, UserDetailInfo> initUserDetailInfo() {
 
-		List<UserDetailInfo> userDetailInfoList = new ArrayList<UserDetailInfo>();
+		Map<String, UserDetailInfo> userDetailMap = new HashMap<String, UserDetailInfo>();
 		
 		// 読み込みファイルのフルPATH
 		String readFilePath = CommonUtil.readFilePath(CommonConstant.USER_DETAIL_FILE_NAME);
@@ -119,10 +114,10 @@ public class ServletInitializer extends SpringBootServletInitializer {
 			userDetailInfo.setEngineerStartDate(engineerStartDate);
 			userDetailInfo.setNote(note);
 			
-			userDetailInfoList.add(userDetailInfo);
+			userDetailMap.put(userId, userDetailInfo);
 		}
 
-		return userDetailInfoList;
+		return userDetailMap;
 	}
 
 }
