@@ -1,90 +1,128 @@
 package com.example.demo;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-import com.example.demo.common.constants.enump.USER_DIV;
+import com.example.demo.common.constants.CommonConstant;
+import com.example.demo.common.constants.enump.UserDivEnum;
 import com.example.demo.common.data.datamemory.DemoDataMemory;
+import com.example.demo.common.data.dto.FileDataInfo;
+import com.example.demo.common.data.dto.UserDetailInfo;
 import com.example.demo.common.data.dto.UserInfo;
+import com.example.demo.common.util.CommonUtil;
+import com.example.demo.service.DataFileService;
 
 /**
  * アプリケーション初期化クラス.
  */
 public class ServletInitializer extends SpringBootServletInitializer {
-	
-	/** Logger. */
-	private static Log LOG = LogFactory.getLog(ServletInitializer.class);
-
-	// TODO 「admin_user_info_data.txt」の配置場所のフルパスを記載
-	/**　管理ユーザ情報の設定ファイルpath. */
-	public static final String ADMIN_USER_INFO_PATH = "C:\\\\Users\\\\yamashitayb\\\\Desktop\\\\山フォルダ\\\\98_GitHub\\\\wordspace\\\\demo2\\\\WebContext\\\\WEB-INF\\\\datafile\\\\admin_user_info_data.txt";
-
-	// TODO 「user_login_info_data.txt」の配置場所のフルパスを記載
-	/**　通常ユーザ情報の設定ファイルpath. */
-	public static final String USER_INFO_PATH = "C:\\\\Users\\\\yamashitayb\\\\Desktop\\\\山フォルダ\\\\98_GitHub\\\\wordspace\\\\demo2\\\\WebContext\\\\WEB-INF\\\\datafile\\\\user_login_info_data.txt"; 
 
 	/**
 	 * アプリケーション初期化処理.
 	 * <p>
-	 * サーバ起動時に実行されます.
-	 * 注）Demo2Application.javaからアプリケーションを起動した場合は実行されません。
+	 * サーバ起動時に実行されます. 注）Demo2Application.javaからアプリケーションを起動した場合は実行されません。
 	 * <p>
 	 */
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		
+
 		// 管理者ファイルより管理者ユーザ情報をメモリに設定
-		this.initUserInfoMemory(ADMIN_USER_INFO_PATH, USER_DIV.MASTER_USER);
-		
+		this.initUserInfoMemory(CommonConstant.ADMIN_USER_FILE_NAME, UserDivEnum.MASTER_USER);
+
 		// ユーザファイルよりユーザ情報をメモリに設定
-		this.initUserInfoMemory(USER_INFO_PATH, USER_DIV.NOMAL_USER);
-		
+		this.initUserInfoMemory(CommonConstant.USER_FILE_NAME, UserDivEnum.NOMAL_USER);
+
 		return application.sources(Demo2Application.class);
 	}
-	
+
 	/**
 	 * ユーザ情報のメモリ登録処理.
 	 * <p>
 	 * ファイルのユーザ情報をメモリに登録する.
 	 * </p>
+	 * 
 	 * @param filePath ユーザ情報設定ファイルパス
-	 * @param userDiv ユーザ区分（Enum）
+	 * @param userDiv  ユーザ区分（Enum）
 	 */
-	public void initUserInfoMemory(String filePath, USER_DIV userDiv) {
+	public void initUserInfoMemory(String fileName, UserDivEnum userDiv) {
+        
+		// 読み込みファイルのフルPATH
+        String readFilePath = CommonUtil.readFilePath(fileName);
+
+		// ファイルのユーザ情報の取得
+		DataFileService dataFileService = new DataFileService();
+		FileDataInfo fileDataInfo = dataFileService.getFileData(readFilePath, CommonConstant.FILE_HEADER_NOT_EXIST);
 		
-	    File file = new File(filePath);
-		
-		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-			
-			String text = null;
-			while ((text = br.readLine()) != null) {
+		// ファイルのユーザ詳細情報の取得
+		List<UserDetailInfo> userDetailInfoList = this.initUserDetailInfo();
+
+		for (String fileValue : fileDataInfo.getFileDataList()) {
+
+			String[] userLoginInfo = fileValue.split(",");
+			String userId = userLoginInfo[0];
+			String pasword = userLoginInfo[1];
+
+			UserInfo userInfo = new UserInfo();
+			userInfo.setUserId(userId);
+			userInfo.setPassword(pasword);
+			userInfo.setUserDiv(userDiv);
+
+			for (UserDetailInfo userDetailInfo : userDetailInfoList) {
 				
-				String[] userLoginInfo = text.split(",");
-				String userId = userLoginInfo[0];
-				String pasword = userLoginInfo[1];
-				
-				UserInfo userInfo = new UserInfo();
-				userInfo.setUserId(userId);
-				userInfo.setPassword(pasword);
-				userInfo.setUserDiv(userDiv);
-				
-				DemoDataMemory.registUserLoginInfo(userInfo);
+				if (userDetailInfo.getUserId().equals(userId)) {
+					userInfo.setUserDetailInfo(userDetailInfo);
+					break;
+				}
 			}
-		} catch (FileNotFoundException e) {
-			LOG.error(e.toString());
-			e.printStackTrace();
-		} catch (IOException e) {
-			LOG.error(e.toString());
-			e.printStackTrace();
+
+			DemoDataMemory.registUserLoginInfo(userInfo);
 		}
+	}
+
+	/**
+	 * ユーザ詳細情報の取得処理.
+	 * <p>
+	 * ファイルのユーザ詳細情報を取得する.
+	 * </p>
+	 * 
+	 * @return ユーザ詳細情報
+	 */
+	public List<UserDetailInfo> initUserDetailInfo() {
+
+		List<UserDetailInfo> userDetailInfoList = new ArrayList<UserDetailInfo>();
+		
+		// 読み込みファイルのフルPATH
+		String readFilePath = CommonUtil.readFilePath(CommonConstant.USER_DETAIL_FILE_NAME);
+
+		// ファイルのユーザ詳細情報の取得
+		DataFileService dataFileService = new DataFileService();
+		FileDataInfo fileDataInfo = dataFileService.getFileData(readFilePath, CommonConstant.FILE_HEADER_EXIST);
+
+		for (String fileValue : fileDataInfo.getFileDataList()) {
+
+			String[] userDetailInfoText = fileValue.split(",");
+			String userId = userDetailInfoText[0];
+			String userName = userDetailInfoText[1];
+			String birthday = userDetailInfoText[2];
+			String mailAddress = userDetailInfoText[3];
+			String engineerStartDate = userDetailInfoText[4];
+			String note = userDetailInfoText[5];
+
+			UserDetailInfo userDetailInfo = new UserDetailInfo();
+			userDetailInfo.setUserId(userId);
+			userDetailInfo.setUserName(userName);
+			userDetailInfo.setBirthday(birthday);
+			userDetailInfo.setMailAddress(mailAddress);
+			userDetailInfo.setEngineerStartDate(engineerStartDate);
+			userDetailInfo.setNote(note);
+			
+			userDetailInfoList.add(userDetailInfo);
+		}
+
+		return userDetailInfoList;
 	}
 
 }

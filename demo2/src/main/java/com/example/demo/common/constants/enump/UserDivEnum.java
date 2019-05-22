@@ -3,7 +3,7 @@ package com.example.demo.common.constants.enump;
 /**
  * ユーザ区分Enum.
  */
-public enum USER_DIV {
+public enum UserDivEnum {
 	
     MASTER_USER("1", "管理ユーザ"),
     NOMAL_USER("2", "通常ユーザ"),
@@ -12,7 +12,7 @@ public enum USER_DIV {
     private final String code;
     private final String note;
 
-    private USER_DIV(final String code, final String id) {
+    private UserDivEnum(final String code, final String id) {
        this.code = code;
        this.note = id;
     }

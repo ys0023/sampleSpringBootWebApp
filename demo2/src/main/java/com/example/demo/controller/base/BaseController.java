@@ -14,6 +14,9 @@ public class BaseController {
 	/** HttpSessionクラス. */
 	@Autowired
 	protected HttpSession session;
+	
+	/** メッセージ追加key. */
+	protected static final String MODEL_MESSASE_KEY = "msg";
 
 	/** エラーメッセージ追加key. */
 	protected static final String MODEL_ERROR_MESSASE_KEY = "errorMsg";

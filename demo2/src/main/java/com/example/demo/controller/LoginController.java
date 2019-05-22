@@ -1,23 +1,19 @@
 package com.example.demo.controller;
 
 import java.util.Date;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.common.constants.MessageConstant;
-import com.example.demo.common.constants.enump.USER_DIV;
+import com.example.demo.common.constants.enump.UserDivEnum;
 import com.example.demo.common.data.dto.UserInfo;
 import com.example.demo.common.util.MessageUtil;
 import com.example.demo.controller.base.BaseController;
@@ -48,7 +44,7 @@ public class LoginController extends BaseController {
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(Model model, @Valid LoginForm loginForm, BindingResult bindingResult, HttpServletRequest request) {
-
+		
 		// バリデーションチェックにひっかった場合はメッセージを設定
 		if (bindingResult.hasErrors()) {
 			model.addAttribute(MODEL_ERROR_MESSASE_KEY, bindingResult.getAllErrors());
@@ -63,6 +59,17 @@ public class LoginController extends BaseController {
 			model.addAttribute(MODEL_ERROR_MESSASE_KEY, errorMessage);
 			return "index.html";
 		}
+		
+		// ユーザID&パスワードのチェック
+		if (!(loginForm.getUser().equals(userInfo.getUserId())) 
+				|| !(loginForm.getPassword().equals(userInfo.getPassword()))) {
+			
+			String errorMessage = MessageUtil.getMessage(MessageConstant.MESSAGE_ERROR_ID_001);
+			model.addAttribute(MODEL_ERROR_MESSASE_KEY, errorMessage);
+			return "index.html";
+		}
+		
+		session.setAttribute("userId", userInfo.getUserId());		
 
 		// ログイン時の時間を保持
 		Date loginTime = (Date)session.getAttribute("loginTime");
@@ -72,37 +79,11 @@ public class LoginController extends BaseController {
 		}
 		model.addAttribute("loginTime", loginTime);
 		
-		if (USER_DIV.MASTER_USER.equals(userInfo.getUserDiv())) {
+		if (UserDivEnum.MASTER_USER.equals(userInfo.getUserDiv())) {
 			return "admin_menu.html";
 		}
 
 		return "nomal_menu.html";
-	}
-
-	/**
-	 * ユーザ情報取得API.
-	 * 
-	 */
-	@ResponseBody
-	@RequestMapping(value = "/user_api", method = RequestMethod.GET)
-	public ResponseEntity<UserInfo> getUserApi(@RequestParam("user") String user, @RequestParam("password") String password) {
-
-		// ユーザ情報の取得
-		UserInfo userInfo = userService.getUserInfo(user);
-		return ResponseEntity.ok(userInfo);
-	}
-	
-	/**
-	 * 全ユーザ情報取得API.
-	 * 
-	 */
-	@ResponseBody
-	@RequestMapping(value = "/all_user_api", method = RequestMethod.GET)
-	public ResponseEntity<Map<String, UserInfo>> getAllUserApi() {
-
-		// ユーザ情報の取得
-		Map<String, UserInfo> allUserInfo = userService.getAllUserInfo();
-		return ResponseEntity.ok(allUserInfo);
 	}
 
 }

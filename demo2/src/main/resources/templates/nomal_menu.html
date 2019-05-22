@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8" />
-<title>Hello, Spring Boot!</title>
+<title>メニュー画面</title>
 </head>
 <body>
 
@@ -11,6 +11,11 @@
 
 ログイン日時
 <p th:text="${loginTime}" /> 
+
+
+	<form th:action="@{/user_detail}"  method="post">
+		<input type="submit" value="ユーザ詳細" />
+	</form>
 
 </body>
 </html>

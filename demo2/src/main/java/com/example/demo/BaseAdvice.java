@@ -16,6 +16,8 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import com.example.demo.common.util.CommonUtil;
+
 /**
  * AOPクラス.
  */
@@ -59,7 +61,7 @@ public class BaseAdvice {
         String paramStr = null;
         // 最後の","を除去する
         if (1 < sb.length()) {
-        	paramStr = sb.substring(0, sb.length() -2);        	
+        	paramStr = CommonUtil.removeLastChar(sb.toString());        	
         }
 		
 		LOG.info("param : [" + paramStr + "]");

@@ -1,6 +1,6 @@
 package com.example.demo.common.data.dto;
 
-import com.example.demo.common.constants.enump.USER_DIV;
+import com.example.demo.common.constants.enump.UserDivEnum;
 
 /**
  * ユーザ情報.
@@ -14,7 +14,10 @@ public class UserInfo {
 	private String password;
 	
 	/**　 ユーザ区分. */
-	private USER_DIV userDiv;
+	private UserDivEnum userDiv;
+	
+	/**　 ユーザ詳細情報. */
+	private UserDetailInfo userDetailInfo;
 	
 	public String getUserId() {
 		return userId;
@@ -32,12 +35,20 @@ public class UserInfo {
 		this.password = password;
 	}
 
-	public USER_DIV getUserDiv() {
+	public UserDivEnum getUserDiv() {
 		return userDiv;
 	}
 
-	public void setUserDiv(USER_DIV userDiv) {
+	public void setUserDiv(UserDivEnum userDiv) {
 		this.userDiv = userDiv;
+	}
+
+	public UserDetailInfo getUserDetailInfo() {
+		return userDetailInfo;
+	}
+
+	public void setUserDetailInfo(UserDetailInfo userDetailInfo) {
+		this.userDetailInfo = userDetailInfo;
 	}
 
 }
