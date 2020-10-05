@@ -6,7 +6,8 @@ package com.example.demo.common.constants;
 public class CommonConstant {
 	
 	/** データファイルPATH. */
-	public static final String DATA_FILE_PATH = "WebContext\\WEB-INF\\datafile\\";
+//	public static final String DATA_FILE_PATH = "WebContext\\WEB-INF\\datafile\\";
+	public static final String DATA_FILE_PATH = "C:\\\\workspace\\\\sampleSpringBootWebApp\\\\demo2\\\\WebContext\\\\WEB-INF\\\\datafile\\\\";
 	
 	/** 管理ユーザ情報の設定ファイル名. */
 	public static final String ADMIN_USER_FILE_NAME = "admin_user_info_data.txt";

@@ -37,10 +37,11 @@ public class CommonUtil {
 	 */
 	public static String readFilePath(String fileName) {
 		
-        Path path = Paths.get(fileName);
-        String fileFullPath = path.toAbsolutePath().toString();
-        String convertFilePath = fileFullPath.replaceAll(fileName, "");
-        return convertFilePath + CommonConstant.DATA_FILE_PATH + fileName;
+//        Path path = Paths.get(fileName);
+//        String fileFullPath = path.toAbsolutePath().toString();
+//        String convertFilePath = fileFullPath.replaceAll(fileName, "");
+//        return convertFilePath + CommonConstant.DATA_FILE_PATH + fileName;
+		return CommonConstant.DATA_FILE_PATH + fileName;
 	}
 
 }

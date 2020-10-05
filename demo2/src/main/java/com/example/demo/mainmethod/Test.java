@@ -21,7 +21,7 @@ public class Test {
 		// TODO Auto-generated method stub
 
 //		String fileName = CommonConstant.ADMIN_USER_INFO_PATH;
-//		String fileName = "C:\\Users\\yamashitayb\\Desktop\\山フォルダ\\98_GitHub\\wordspace\\demo2\\WebContext\\WEB-INF\\datafile\\admin_user_info_data.txt";
+//		String fileName = "C:\\workspace\\sampleSpringBootWebApp\\demo2\\WebContext\\WEB-INF\\datafile\\admin_user_info_data.txt";
 		String fileName = "admin_user_info_data.txt";
 		
         Path path = Paths.get(fileName);
