@@ -45,7 +45,7 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(Model model, @Valid LoginForm loginForm, BindingResult bindingResult, HttpServletRequest request) {
 		
-		// バリデーションチェックにひっかった場合はメッセージを設定
+		// バリデーションチェックにひっかかった場合はメッセージを設定
 		if (bindingResult.hasErrors()) {
 			model.addAttribute(MODEL_ERROR_MESSASE_KEY, bindingResult.getAllErrors());
 			return "index.html";
@@ -83,7 +83,7 @@ public class LoginController extends BaseController {
 			return "admin_menu.html";
 		}
 
-		return "nomal_menu.html";
+		return "normal_menu.html";
 	}
 
 }
