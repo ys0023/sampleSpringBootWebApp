@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>在庫一覧画面</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>ＩＤ</th>
+            <th>名前</th>
+            <th>在庫</th>
+            <th>値段</th>
+            <th>産地</th>
+            <th>種別</th>
+        </tr>
+        <tr th:each="info: ${objectInventory}">
+            <td th:text="${info.id}"></td>
+            <td th:text="${info.objectName}"></td>
+            <td th:text="${info.objectCount}"></td>
+			<td th:text="${info.objectPrice}"></td>
+			<td th:text="${info.objectOrigin}"></td>
+			<td th:text="${info.objectType}"></td>
+        </tr>
+    </table>
+</body>
+</html>
