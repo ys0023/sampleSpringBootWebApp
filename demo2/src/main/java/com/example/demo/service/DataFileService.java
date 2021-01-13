@@ -15,7 +15,6 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jvnet.hk2.annotations.Service;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.common.constants.CommonConstant;
@@ -25,7 +24,6 @@ import com.example.demo.common.data.dto.FileDataInfo;
  * データファイル書込みサービス.
  */
 @Component
-@Service
 public class DataFileService {
 	
 	/** ヘッダー行. */

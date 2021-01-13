@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.jvnet.hk2.annotations.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +22,6 @@ import com.example.demo.form.UserRegisterForm;
  * ユーザサービス.
  */
 @Component
-@Service
 public class UserService {
 
 	/** データ書込みサービス. */

@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,7 +84,8 @@ public class LoginController extends BaseController {
 			return "admin_menu.html";
 		}
 
+		
+		
 		return "normal_menu.html";
 	}
-
 }
