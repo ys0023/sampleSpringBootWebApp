@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.dao.ObjectInventoryDao;
+import com.example.demo.dao.ObjectInventoryRsDao;
 import com.example.demo.entity.ObjectInventory;
 
 /**
@@ -17,6 +18,9 @@ public class DemoService {
     @Autowired
     private ObjectInventoryDao objectInventoryDao;
 
+    @Autowired
+    private ObjectInventoryRsDao objectInventoryRsDao;
+
 	/**
 	 * ObjectInventoryリストを取得する.
 	 * 
@@ -24,6 +28,10 @@ public class DemoService {
 	 */
     public List<ObjectInventory> selectObjectInventory() {
         return objectInventoryDao.selectObjectInventory();
+    }
+
+    public List<ObjectInventory> selectRsObjectInventory(int objectCount) {
+        return objectInventoryRsDao.selectObjectInventory(objectCount);
     }
 
 }

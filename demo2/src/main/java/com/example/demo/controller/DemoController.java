@@ -21,9 +21,11 @@ public class DemoController extends BaseController {
     public String dbTest(Model model) {
     	
         List<ObjectInventory> list = demoService.selectObjectInventory();
-        
         model.addAttribute("objectInventory", list);
         
+        List<ObjectInventory> rsList = demoService.selectRsObjectInventory(30); // 在庫数：30        
+        model.addAttribute("rsObjectInventory", rsList);
+
         return "db_test";
     }
 
