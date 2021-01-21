@@ -7,40 +7,40 @@
 <body>
     <table border="1">
         <tr>
-            <th>ID</th>
-            <th>名前</th>
-            <th>在庫</th>
-            <th>値段</th>
+            <th>在庫ID</th>
+            <th>商品名</th>
+            <th>在庫数</th>
+            <th>価格</th>
             <th>産地</th>
-            <th>種別</th>
+            <th>品目</th>
         </tr>
-        <tr th:each="info: ${objectInventory}">
-            <td th:text="${info.id}"></td>
-            <td th:text="${info.objectName}"></td>
-            <td th:text="${info.objectCount}"></td>
-			<td th:text="${info.objectPrice}"></td>
-			<td th:text="${info.objectOrigin}"></td>
-			<td th:text="${info.objectType}"></td>
+        <tr th:each="info: ${inventoryControlList}">
+            <td th:text="${info.inventoryId}"></td>
+            <td th:text="${info.productName}"></td>
+            <td th:text="${info.stock}"></td>
+            <td th:text="${info.price}"></td>
+            <td th:text="${info.origin}"></td>
+            <td th:text="${info.itemType}"></td>
         </tr>
     </table>
     <br>
     <br>
     <table border="1">
         <tr>
-            <th>ID</th>
-            <th>名前</th>
-            <th>在庫</th>
-            <th>値段</th>
+            <th>在庫ID</th>
+            <th>商品名</th>
+            <th>在庫数</th>
+            <th>価格</th>
             <th>産地</th>
-            <th>種別</th>
+            <th>品目</th>
         </tr>
-        <tr th:each="info: ${rsObjectInventory}">
-            <td th:text="${info.id}"></td>
-            <td th:text="${info.objectName}"></td>
-            <td th:text="${info.objectCount}"></td>
-			<td th:text="${info.objectPrice}"></td>
-			<td th:text="${info.objectOrigin}"></td>
-			<td th:text="${info.objectType}"></td>
+        <tr th:each="info: ${jdbcInventoryControlList}">
+            <td th:text="${info.inventoryId}"></td>
+            <td th:text="${info.productName}"></td>
+            <td th:text="${info.stock}"></td>
+            <td th:text="${info.price}"></td>
+            <td th:text="${info.origin}"></td>
+            <td th:text="${info.itemType}"></td>
         </tr>
     </table>
 </body>

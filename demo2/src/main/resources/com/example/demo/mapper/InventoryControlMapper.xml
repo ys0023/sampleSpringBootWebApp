@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.InventoryControlMapper">
+    <select id="selectAll" resultType="com.example.demo.entity.InventoryControlEntity">
+        SELECT inventory_id
+             , product_name AS productName
+             , stock AS stock
+             , price AS price
+             , origin AS origin
+             , item_type AS itemType
+          FROM inventory_control;
+    </select>
+</mapper>

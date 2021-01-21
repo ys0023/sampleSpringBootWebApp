@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.dao.ObjectInventoryDao;
-import com.example.demo.dao.ObjectInventoryRsDao;
-import com.example.demo.entity.ObjectInventory;
+import com.example.demo.dao.InventoryControlDao;
+import com.example.demo.dao.InventoryControlJdbcDao;
+import com.example.demo.entity.InventoryControlEntity;
 
 /**
  * Demoサービス.
@@ -15,23 +15,37 @@ import com.example.demo.entity.ObjectInventory;
 @Component
 public class DemoService {
 
-    @Autowired
-    private ObjectInventoryDao objectInventoryDao;
+	@Autowired
+	private InventoryControlDao inventoryControlDao;
 
-    @Autowired
-    private ObjectInventoryRsDao objectInventoryRsDao;
+	@Autowired
+	private InventoryControlJdbcDao inventoryControlJdbcDao;
 
 	/**
-	 * ObjectInventoryリストを取得する.
+	 * 在庫管理情報一覧を取得する.
 	 * 
-	 * @return ObjectInventoryリスト
+	 * @return 在庫管理情報一覧
 	 */
-    public List<ObjectInventory> selectObjectInventory() {
-        return objectInventoryDao.selectObjectInventory();
-    }
+	public List<InventoryControlEntity> selectInventoryControlList() {
+		return inventoryControlDao.selectList();
+	}
 
-    public List<ObjectInventory> selectRsObjectInventory(int objectCount) {
-        return objectInventoryRsDao.selectObjectInventory(objectCount);
-    }
+	/**
+	 * 在庫管理情報一覧を取得する(JDBC).
+	 * 
+	 * @param stock 在庫数
+	 * @return 在庫管理情報一覧
+	 */
+	public List<InventoryControlEntity> selectJdbcInventoryControlList(int stock) {
+		return inventoryControlJdbcDao.selectByStock(stock);
+	}
 
+	/**
+	 * 在庫管理情報を登録する(JDBC).
+	 * 
+	 * @param entity 在庫管理エンティティクラス
+	 */
+	public void insertJdbcInventoryControl(InventoryControlEntity entity) {
+		inventoryControlJdbcDao.insert(entity);
+	}
 }
