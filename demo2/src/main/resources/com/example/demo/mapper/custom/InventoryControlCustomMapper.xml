@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.mapper.InventoryControlMapper">
+<mapper namespace="com.example.demo.mapper.InventoryControlCustomMapper">
     <select id="selectAll" resultType="com.example.demo.entity.InventoryControlEntity">
-        SELECT inventory_id
+        SELECT inventory_id AS inventoryId
              , product_name AS productName
              , stock AS stock
              , price AS price

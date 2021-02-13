@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 import com.example.demo.entity.InventoryControlEntity;
 
 @Mapper
-public interface InventoryControlMapper {
+public interface InventoryControlCustomMapper {
     List<InventoryControlEntity> selectAll();
 }

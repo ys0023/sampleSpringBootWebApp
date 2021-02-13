@@ -5,6 +5,28 @@
 <title>在庫一覧画面</title>
 </head>
 <body>
+    <h1>JDBC SQL検索</h1>
+    <table border="1">
+        <tr>
+            <th>在庫ID</th>
+            <th>商品名</th>
+            <th>在庫数</th>
+            <th>価格</th>
+            <th>産地</th>
+            <th>品目</th>
+        </tr>
+        <tr th:each="info: ${jdbcInventoryControlList}">
+            <td th:text="${info.inventoryId}"></td>
+            <td th:text="${info.productName}"></td>
+            <td th:text="${info.stock}"></td>
+            <td th:text="${info.price}"></td>
+            <td th:text="${info.origin}"></td>
+            <td th:text="${info.itemType}"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h1>O/R Mapper SQLカスタマイズ検索</h1>
     <table border="1">
         <tr>
             <th>在庫ID</th>
@@ -25,6 +47,7 @@
     </table>
     <br>
     <br>
+    <h1>O/R Mapper Generate検索(PK検索)</h1>
     <table border="1">
         <tr>
             <th>在庫ID</th>
@@ -34,13 +57,55 @@
             <th>産地</th>
             <th>品目</th>
         </tr>
-        <tr th:each="info: ${jdbcInventoryControlList}">
-            <td th:text="${info.inventoryId}"></td>
-            <td th:text="${info.productName}"></td>
-            <td th:text="${info.stock}"></td>
-            <td th:text="${info.price}"></td>
-            <td th:text="${info.origin}"></td>
-            <td th:text="${info.itemType}"></td>
+        <tr>
+            <td th:text="${generateIC.INVENTORY_ID}"></td>
+            <td th:text="${generateIC.PRODUCT_NAME}"></td>
+            <td th:text="${generateIC.STOCK}"></td>
+            <td th:text="${generateIC.PRICE}"></td>
+            <td th:text="${generateIC.ORIGIN}"></td>
+            <td th:text="${generateIC.ITEM_TYPE}"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h1>O/R Mapper Generate検索(全検索)</h1>
+    <table border="1">
+        <tr>
+            <th>在庫ID</th>
+            <th>商品名</th>
+            <th>在庫数</th>
+            <th>価格</th>
+            <th>産地</th>
+            <th>品目</th>
+        </tr>
+        <tr th:each="info: ${generateInventoryControlListAll}">
+            <td th:text="${info.INVENTORY_ID}"></td>
+            <td th:text="${info.PRODUCT_NAME}"></td>
+            <td th:text="${info.STOCK}"></td>
+            <td th:text="${info.PRICE}"></td>
+            <td th:text="${info.ORIGIN}"></td>
+            <td th:text="${info.ITEM_TYPE}"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h1>O/R Mapper Generate検索(在庫数範囲指定検索)</h1>
+    <table border="1">
+        <tr>
+            <th>在庫ID</th>
+            <th>商品名</th>
+            <th>在庫数</th>
+            <th>価格</th>
+            <th>産地</th>
+            <th>品目</th>
+        </tr>
+        <tr th:each="info: ${generateInventoryControlListStock}">
+            <td th:text="${info.INVENTORY_ID}"></td>
+            <td th:text="${info.PRODUCT_NAME}"></td>
+            <td th:text="${info.STOCK}"></td>
+            <td th:text="${info.PRICE}"></td>
+            <td th:text="${info.ORIGIN}"></td>
+            <td th:text="${info.ITEM_TYPE}"></td>
         </tr>
     </table>
 </body>
